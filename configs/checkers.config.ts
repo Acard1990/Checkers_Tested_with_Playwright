@@ -7,5 +7,5 @@ console.log('Using testDir:', testDir);
 
 export default defineConfig({
   testDir,
-  testMatch: ['tests/checkers.spec.ts'],
+  testMatch: ['tests/checkers/*.ts'],
 });
