@@ -16,11 +16,11 @@ export class CheckersPage extends BasePage {
   }
 
   // Getters
-  get title() {
+  get titleTxt() {
     return this._title.textContent();
   }
 
-  get message() {
+  get messageTxt() {
     return this._message.textContent();
   }
 
