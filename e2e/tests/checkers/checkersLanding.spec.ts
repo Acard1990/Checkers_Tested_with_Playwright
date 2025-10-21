@@ -19,6 +19,10 @@ test.describe('Checkers Landing', () => {
         await expect(checkersPage.titleTxt).resolves.toContain(titleText);
     });
 
+    test('Validate gameplay board is visible on initial load', async () => {
+        await expect(checkersPage._gameBoard).toBeVisible();
+    });
+
     test('Validate the start game message on initial load', async () => {
         await expect(checkersPage.messageTxt).resolves.toContain(GameMessages.Start);
     });

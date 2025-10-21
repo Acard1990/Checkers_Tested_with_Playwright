@@ -40,6 +40,15 @@ test.describe('Checkers Gameplay', () => {
     // expect the end locator has the src attribute you 1 gif
   });
 
+  test('Validate online player can restart game after first move', async ({ page }) => {
+    // Get board start state
+    // make first move using myMoves array
+    // expect that the move happened by comparing the selector src attributes
+    // click restart link
+    // expect the move was reset by checking the src attributes. 
+    // can also use getBoardState helper to compare to initial state
+  });
+
   test('Validate board does not change with invalid move', async ({ page }) => {
     const start = page.locator(`[name="space${myMoves[0].start}"]`);
     const end = page.locator(`[name="space${myMoves[3].end}"]`); // invalid move

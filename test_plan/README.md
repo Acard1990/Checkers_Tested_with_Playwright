@@ -9,10 +9,16 @@ This test plan outlines the necessary details to ensure that the checkers game h
 - Ensure that the system performs reliably, securely, and efficiently.
 
 ### In Scope
-- Checkers game page loads main components
-- Checkers gameplay is suitable for online players
-- Checkers gameplay restart functionality
-- Rules link 
+- Checkers General (Landing Page)
+  - Title
+  - Rules link redirect
+  - Restart link
+- Checkers Gameplay
+  - Checkers gameplay is suitable for online players
+    - Valid moves
+    - Invalid moves are not registered
+    - Opponent updates board
+    - Checkers gameplay restart functionality
 
 ### Out of Scope
 - Reloading page during gameplay
@@ -20,7 +26,7 @@ This test plan outlines the necessary details to ensure that the checkers game h
 - Performance 
 - Security
 - Ads
-- External links
+- External links with exception of Rules link
 
 ## Test Strategy
 

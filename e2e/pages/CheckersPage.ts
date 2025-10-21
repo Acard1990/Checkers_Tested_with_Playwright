@@ -2,14 +2,16 @@ import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
 export class CheckersPage extends BasePage {
-  private readonly _title: Locator;
-  private readonly _message: Locator;
-  private readonly _restartLink: Locator;
-  private readonly _rulesLink: Locator;
+  readonly _title: Locator;
+  readonly _gameBoard: Locator;
+  readonly _message: Locator;
+  readonly _restartLink: Locator;
+  readonly _rulesLink: Locator;
 
   constructor(page: Page) {
     super(page);
     this._title = page.locator('h1');
+    this._gameBoard = page.locator('#board');
     this._message = page.locator('#message');
     this._restartLink = page.locator("text=Restart");
     this._rulesLink = page.locator('a[href="https://en.wikipedia.org/wiki/English_draughts#Starting_position"]');
@@ -22,6 +24,10 @@ export class CheckersPage extends BasePage {
 
   get messageTxt() {
     return this._message.textContent();
+  }
+
+  getLocator() {
+    return this._gameBoard;
   }
 
   getMessageLocator(msg: string) {
